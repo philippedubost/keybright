@@ -1,0 +1,168 @@
+body { 
+    background: #222;
+    font-family: Myriad Pro, Helvetica, Arial, Verdana, serif;
+    color: #fff;
+    font-weight: 300;
+}
+
+
+
+* { 
+    padding: 0; 
+    margin: 0; 
+    overflow: hidden;
+}
+
+button { 
+    z-index: 10;
+}
+
+.container {    
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+}
+
+.is-fullscreen #canvas-container {
+    width: 1920px;
+    height: 1080px;
+}
+
+.is-fullscreen #canvas-container canvas {
+    margin: 0;
+    max-width: 1920px;
+    max-height: 1080px;
+}
+
+canvas {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+}
+
+canvas:active { 
+    cursor: pointer;
+    cursor: -webkit-grabbing;
+}
+
+.controls-container {
+    margin: 0 0 0 0;
+    width: 1920px;
+    height: 1080px;
+}
+
+#canvas-container {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+}
+
+.slide {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.slide h1 {
+    text-align: center;
+    vertical-align: middle;
+    font: 400 50pt 'Pacifico', Helvetica, sans-serif;
+    color: #ddd;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.4);
+    color: #fff;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #555;
+    margin-bottom: 20px;
+}
+
+.slide p {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #555;
+    margin-bottom: 20px;
+}
+
+.resize-drag {
+    color: white;
+    font-size: 20px;
+    font-family: Myriad Pro, Helvetica, Arial, Verdana, serif;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 20px;
+    top: 300px;
+    left:400px;
+    width: 450px;
+    height: 134px;
+
+    /* This makes things *much* easier */
+    box-sizing: border-box;
+}
+
+#calibrationRectangle{
+    background-image: url("../img/keyboard.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(0,255,255,.2);
+}
+
+.resize-container {
+  width: 100%;
+  height: 1080px;
+}
+
+
+#startPlay {
+    position: absolute;     
+    left: 0; 
+    top: 160px;
+}
+
+#backToCalibration {
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    border-color: rgba(255,255,255,.2);
+    color: rgba(255,255,255,.2);
+}
+
+#backToCalibration:hover {
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    border-color: rgba(255,255,255,.8);
+    color: rgba(255,255,255,.8);
+}
+
+#keyboardLight {
+
+    /* TODO: Make a nice GIF animation for keyboardLight !*/
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    background-image: url("../img/keyboardLight.png");
+    color: rgba(255,255,255,.2);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#keyboardLight_print {
+
+    /* TODO: Make a nice GIF animation for keyboardLight !*/
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    background-image: url("../img/keyboardLight_print.png");
+    color: rgba(255,255,255,.2);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.no-border {
+    border: none;
+}
+
+#calibration {
+    height: 400px;
+}
