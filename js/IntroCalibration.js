@@ -1,4 +1,8 @@
-        //This portion sets up the Intro Menu and the Calibration process with the Drag-Resize Box
+        /*
+        Keybright:  https://github.com/philippedubost/keybright
+        ---------------------------------
+        This portion sets up the Intro Menu and the Calibration process with the Drag-Resize Box
+        */        
         var keyboardX = 400;
         var keyboardY = 300;
         var keyboardSX = 450*800/1920;
@@ -134,6 +138,7 @@
             });
 
             $("#backToCalibration").click(function(){
+                $("#scene-menu").fadeIn(500);
                 $("#social-box").fadeIn(500);
                 $("#footer").fadeIn(500);
                 $("#calibration").fadeIn(500);

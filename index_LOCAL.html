@@ -18,7 +18,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  
     <script type="text/javascript">
-        var scene = "Musicolor";
+        var scene = "Keyboard";
+        
+        // get the scene function name from hash
+        if (window.location.hash.length !== 0) 
+            scene = window.location.hash.replace('#', '').replace('-inspect', '');
     </script>
     <script type="text/javascript" src="./js/scenes/Keyboard.js"></script>
     <script type="text/javascript" src="./js/scenes/Musicolor.js"></script>
@@ -76,7 +80,11 @@
     - Casse brique
     - Type match
     - ...
-    -->
+    
+    <div id="scene-menu">
+                <a onClick="swapScene("Keyboard")">Keyboard</a> - <a href="index_LOCAL.html#Musicolor">Musicolor</a>
+            </div>
+            -->
 
     <!-- HOME -->
     <div id="home" class="slide">
@@ -113,11 +121,7 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <div id="footer" align="center">
-        
-        
-    </div>
+    
 
 	
 </body>
