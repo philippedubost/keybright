@@ -1,3 +1,4 @@
+        //This portion sets up the Intro Menu and the Calibration process with the Drag-Resize Box
         var keyboardX = 400;
         var keyboardY = 300;
         var keyboardSX = 450*800/1920;

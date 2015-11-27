@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex">
+
+    <script type="text/javascript" src="./js/lib/matter-0.8.0.js"></script>
+
+    <script src="js/lib/modernizr.custom.js"></script>
+    <script src="js/lib/interact.min.js"></script>
+
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 
+    <script type="text/javascript">
+        var scene = "Musicolor";
+    </script>
+    <script type="text/javascript" src="./js/scenes/Keyboard.js"></script>
+    <script type="text/javascript" src="./js/scenes/Musicolor.js"></script>
+
+    <script type="text/javascript" src="./js/IntroCalibration.js"></script>
+
+    <title>Keybright 1.0 - Your DIY light installation</title>
+</head>
+<body>
+    <!--<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="social-box" align="right">
+        <div class="fb-like" data-href="https://www.facebook.com/keybright.net" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+    </div>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46810788-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    -->
+
+        
+
+    <audio id="sound1" src="sound/key1.ogg" preload="auto"></audio>
+    <audio id="sound2" src="sound/key2.ogg" preload="auto"></audio> 
+    <audio id="sound3" src="sound/key3.ogg" preload="auto"></audio> 
+
+    <audio id="sound4" src="sound/space1.ogg" preload="auto"></audio>
+    <audio id="sound5" src="sound/space2.ogg" preload="auto"></audio>
+
+    <!--    
+    https://github.com/philippedubost/keybright
+    TODO:
+    - Create a template game 
+
+    IDEAS
+    - Make game variations library
+    - Open github commuity to create games and apps
+    - Message: 'You have a projector at home? Let's take a few seconds to create a fun and original playground with a simple keyboard and some imagination !'
+
+    GAMES
+    - Incredible machine style
+    - Casse brique
+    - Type match
+    - ...
+    -->
+
+    <!-- HOME -->
+    <div id="home" class="slide">
+        <h1>Welcome to Keybright 1.0</h1>
+        <p>Build your own magical light installation in just a few clicks.</p>
+        <button  class="btn btn-4 btn-4c icon-arrow-right" id="startPreparation">1. Let's go !</button>
+    </div>
+
+    <!--  PREPARATION - Grille de calibration en background -->
+    <div id="preparation" class="slide">
+        <h1>Preparation</h1>
+        <p>Drag that Window to your projector screen. Press F11 to go fullscreen</p>
+        <button class="btn btn-4 btn-4c icon-arrow-right" id="startCalibration">2. Calibrate Keyboard</button>
+    </div>   
+
+    <!--  CALIBRATION - Grille de calibration en background -->  
+    <div id="calibration" class="slide no-border">
+       <h1>Calibration</h1>
+       <button  class="btn btn-4 btn-4c icon-arrow-right" id="startPlay">3. Play !</button>
+
+    </div>
+    <div class="resize-container">
+        <div id="calibrationRectangle" class="resize-drag draggable">
+            Drag and Resize me over your keyboard.
+        </div>
+    </div>
+
+    <!--  PLAY -->  
+    <button class="btn btn-4 btn-4b icon-arrow-left top-layer"  id="backToCalibration">Re-Calibrate</button>
+    <div id="keyboardLight"></div>
+    <div id="keyboardLight_print"></div>
+    <div class="container" id="play">
+        <div id="canvas-container">
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer" align="center">
+        
+        
+    </div>
+
+	
+</body>
+</html>
