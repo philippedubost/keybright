@@ -202,9 +202,6 @@
         });
 
         //Sound
-        sound = document.getElementById('sound'+(Math.round(Math.random()*2)+1));
-        sound.currentTime = 0;
-        sound.play();
 
     };
 
@@ -222,10 +219,6 @@
                 y: -0.005-0.005*Math.random()
             });
         }
-
-        var sound = document.getElementById('sound'+(Math.round(Math.random()*1)+4));
-        sound.currentTime = 0;
-        sound.play();
     };
 
     Musicolor.destroyFallenLetters = function() {

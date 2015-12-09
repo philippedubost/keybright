@@ -4,22 +4,11 @@
     This portion is a template behavior for the Keyboard
     It is using the variables keyboardX, keyboardY, keyboardSX, keyboardSY set during Calibration phase.
     */  
-
     (function() {
-    //refers to the folder /img/courirerNew/ containing all letters images
+    //refers to the folder /img/courierNew/ containing all letters images
     var _FONT = "courierNew";
-
-    function parseSecond(val) {
-        var result = "Not found",
-        tmp = [];
-        var items = location.search.substr(1).split("&");
-        for (var index = 0; index < items.length; index++) {
-            tmp = items[index].split("=");
-            if (tmp[0] === val) result = decodeURIComponent(tmp[1]);
-        }
-        return result;
-    }
-
+    var soundType = new Howl({urls: ['../../sound/key1.ogg']});
+    var soundSpace = new Howl({urls: ['../../sound/space1.ogg']});
 
     // Matter aliases
     var Engine = Matter.Engine,
@@ -39,11 +28,6 @@
     Mouse = Matter.Mouse,
     Query = Matter.Query;
 
-    // MatterTools aliases
-    //if (window.MatterTools) {
-    //    var Gui = MatterTools.Gui,
-    //        Inspector = MatterTools.Inspector;
-    //}
     var Keyboard = {};
 
     var _engine,
@@ -61,8 +45,6 @@
 
         // some example engine options
         var options = {
-            //width: 1920,
-            //height: 1080,
             background: '#111111',
             positionIterations: 6,
             velocityIterations: 4
@@ -124,8 +106,6 @@
         }
     };
 
-    var sound;
-
     //Used onkeydown with A..Z 0..9
     Keyboard.shootLetter = function(charCode) {
         var _world = _engine.world;
@@ -155,8 +135,6 @@
         //scaling down and offseting to the left
         x_fraction = x_fraction*0.8-0.2; 
 
-        //window.alert(x_fraction);
-
         //Add letter to the world
         World.add(_world, [
             Bodies.rectangle(keyboardX + (-0.5+x_fraction)*keyboardSX/2, keyboardY - keyboardSY/2-5, 14, 14, {
@@ -180,12 +158,11 @@
         });
 
         //Sound
-        sound = document.getElementById('sound'+(Math.round(Math.random()*2)+1));
-        sound.currentTime = 0;
-        sound.play();
+       soundType.play();
 
     };
 
+       
     //Used when SPACE is pressed    
     Keyboard.explode = function() {
         var _world = _engine.world;
@@ -200,10 +177,9 @@
                 y: 0.04*(Math.random()-.5)
             });
         }
-
-        var sound = document.getElementById('sound'+(Math.round(Math.random()*1)+4));
-        sound.currentTime = 0;
-        sound.play();
+        
+        //Sound
+       soundSpace.play();
     };
 
     Keyboard.destroyFallenLetters = function() {

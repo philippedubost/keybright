@@ -6,28 +6,57 @@
     <meta name="viewport" content="width=device-width">
     <meta name="robots" content="noindex">
 
+    <meta property="og:title" content="Keybright 1.0 - Your DIY light installation"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.keybright.net/"/>
+    <meta property="og:image" content="http://keybright.net/img/thumbnailFB3.png"/>
+    <meta property="og:image" content="http://keybright.net/img/thumbnailFB.png"/>
+    <meta property="og:site_name" content="Keybright 1.0 - Your DIY light installation"/>
+    <meta property="og:description" content="Keybright is a website that helps you build your own magical light installation at home in just a few clicks."/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <script type="text/javascript" src="./js/lib/matter-0.8.0.js"></script>
 
     <script src="js/lib/modernizr.custom.js"></script>
     <script src="js/lib/interact.min.js"></script>
+    <script src="js/lib/howler.min.js"></script>
 
-    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="./css/styles.css?v5" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  
-    <script type="text/javascript">
+    <script type="text/javascript">        
         var scene = "Keyboard";
-        
-        // get the scene function name from hash
-        if (window.location.hash.length !== 0) 
-            scene = window.location.hash.replace('#', '').replace('-inspect', '');
-    </script>
-    <script type="text/javascript" src="./js/scenes/Keyboard.js"></script>
-    <script type="text/javascript" src="./js/scenes/Musicolor.js"></script>
 
-    <script type="text/javascript" src="./js/IntroCalibration.js"></script>
+        /* get the scene function name from hash
+        if (window.location.hash.length !== 0) {
+            scene = window.location.hash.replace('#', '').replace('-inspect', '');
+        }*/
+    </script>
+    <script type="text/javascript" src="./js/scenes/Keyboard.js?v.15"></script>
+    <!--<script type="text/javascript" src="./js/scenes/Musicolor.js"></script>-->
+
+    <script type="text/javascript" src="./js/IntroCalibration.js?v3"></script>
 
     <title>Keybright 1.0 - Your DIY light installation</title>
 </head>
@@ -37,12 +66,16 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=164515633479";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <div id="social-box" align="right">
-        <div class="fb-like" data-href="https://www.facebook.com/keybright.net" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        <div class="fb-like" data-href="http://www.facebook.com/keybright.net" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+        
+        <a class="github-button" href="https://github.com/philippedubost/keybright/fork" data-icon="octicon-repo-forked" aria-label="Fork philippedubost/keybright on GitHub">Fork</a>
+        <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
     </div>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -52,18 +85,7 @@
 
       ga('create', 'UA-46810788-3', 'auto');
       ga('send', 'pageview');
-
-    </script>
-
-        
-
-    <audio id="sound1" src="sound/key1.ogg" preload="auto"></audio>
-    <audio id="sound2" src="sound/key2.ogg" preload="auto"></audio> 
-    <audio id="sound3" src="sound/key3.ogg" preload="auto"></audio> 
-
-    <audio id="sound4" src="sound/space1.ogg" preload="auto"></audio>
-    <audio id="sound5" src="sound/space2.ogg" preload="auto"></audio>
-
+    </script>  
     <!--    
     https://github.com/philippedubost/keybright
     TODO:
@@ -81,28 +103,38 @@
     - ...
     
     <div id="scene-menu">
-                <a onClick="swapScene("Keyboard")">Keyboard</a> - <a href="index_LOCAL.html#Musicolor">Musicolor</a>
+                <a onClick="swapToKeyboard()">Keyboard</a> - <a onClick="swapToMusicolor()">Musicolor</a>
             </div>
+    
+            
+    <audio src="sound/key1.ogg">
+    <audio src="sound/space1.ogg">
             -->
-
     <!-- HOME -->
     <div id="home" class="slide">
-        <h1>Welcome to Keybright 1.0</h1>
+        <h1>Keybright 1.0</h1>
+
         <p>Build your own magical light installation in just a few clicks.</p>
-        <button  class="btn btn-4 btn-4c icon-arrow-right" id="startPreparation">1. Let's go !</button>
+
+          <!--<p><iframe width="560" height="315" src="https://www.youtube.com/embed/jGsy8-8wlck" frameborder="0"></iframe></p>-->
+
+        <p><iframe src="https://player.vimeo.com/video/147960262?color=ffffff&title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+
+        <p class="links"><button  class="btn btn-4 btn-4c icon-arrow-right" id="startPreparation">1. Let's go !</button><br />
+            or get to know <a id="startStory">the story behind the project</a> first.</p>
     </div>
 
-    <!--  PREPARATION - Grille de calibration en background -->
+    <!--  PREPARATION -->
     <div id="preparation" class="slide">
         <h1>Preparation</h1>
         <p>Drag that Window to your projector screen. Press F11 to go fullscreen</p>
         <button class="btn btn-4 btn-4c icon-arrow-right" id="startCalibration">2. Calibrate Keyboard</button>
     </div>   
 
-    <!--  CALIBRATION - Grille de calibration en background -->  
+    <!--  CALIBRATION -->  
     <div id="calibration" class="slide no-border">
        <h1>Calibration</h1>
-       <button  class="btn btn-4 btn-4c icon-arrow-right" id="startPlay">3. Play !</button>
+       <button class="btn btn-4 btn-4c icon-arrow-right" id="startPlay">3. Play!</button>
 
     </div>
     <div class="resize-container">
@@ -119,9 +151,6 @@
         <div id="canvas-container">
         </div>
     </div>
-
-    
-
     
 </body>
 </html>

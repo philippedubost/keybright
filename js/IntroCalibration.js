@@ -101,7 +101,10 @@
             $(".resize-container").hide();
             $("#play").hide();
             $("#backToCalibration").hide();
+            $("#gamesMenu").hide();
             $("#keyboardLight").hide();
+            $("#follow").hide();
+            $("#story").hide(); 
 
 
             $("#startPreparation").click(function(){
@@ -147,5 +150,13 @@
                 $("#backToCalibration").fadeOut(500);
                 $("#keyboardLight").hide();
                 $("#keyboardLight_print").hide();
+            });
+
+            $("#backFromStory").click(function(){
+                window.location.href = "index.html"; 
+            });
+
+            $("#startStory").click(function(){
+                window.location.href = "story.html";
             });
         });
