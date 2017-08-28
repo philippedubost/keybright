@@ -1,5 +1,5 @@
 # keybright
-Build your own interactive light installation with a projector and a keyboard
+Build your own interactive light installation with a projector and a keyboard. 
 Try it at http://keybright.net
 
 # story
