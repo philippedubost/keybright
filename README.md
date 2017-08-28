@@ -1,5 +1,6 @@
 # keybright
 Build your own interactive light installation with a projector and a keyboard
+Try it at http://keybright.net
 
 # story
 - In 2012, I created a simple installation called Magic Keyboard (https://vimeo.com/45154003) with vvvv: a Windows-based toolkit. The project was only running on my laptop at the time and wasn't ready to be opened on any device. 
